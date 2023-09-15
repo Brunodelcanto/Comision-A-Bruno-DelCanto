@@ -1,29 +1,29 @@
-<%-include('partials/header')  %>
-<%-include('partials/navbar')  %>
+<%-include('partials/header') %> <%-include('partials/navbar') %>
 
-    
+<!-- Formulario para crear publicaciones -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center py-3">Lista de Publicaciones</h1>
+    </div>
 
-    <!-- Formulario para crear publicaciones -->
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center py-3">Lista de Publicaciones</h1>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col">
-                <main class="gap-2 d-flex flex-column" id="lista-publicaciones">
-                    
-                    
-                </main>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col">
+      <main class="gap-2 d-flex flex-column" id="lista-publicaciones"></main>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="fila">
+    <div class="button"><button type="button" class="btn btn-outline-primary btn-lg" id="botonCrear">Crear publicación</button></div>
+    <div class="button"><button type="button" class="btn btn-outline-primary btn-lg" id="botonCrear">Editar publicación</button></div>
+    </div>
     </div>
 
 
+    <script src="/js/home.js"></script>
 
+  </div>
+</div>
 
-<script src="/js/home.js"></script>
-
-  <%-include('partials/footer')  %>
+<%-include('partials/footer') %>

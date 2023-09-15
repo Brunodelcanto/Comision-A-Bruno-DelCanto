@@ -41,3 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     mostrarPublicaciones(publicaciones, main)
 })
+
+document.getElementById("botonCrear").onclick = function () {
+    window.location.href = "http://localhost:3000/admin";
+};

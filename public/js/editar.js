@@ -50,3 +50,7 @@ formGuardar.addEventListener('submit', async (e) => {
     location.href = "/"
 
 })
+
+document.getElementById("botonEditar").onclick = function () {
+    window.location.href = "http://localhost:3000/editar";
+};
