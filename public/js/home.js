@@ -17,6 +17,7 @@ const mostrarPublicaciones = (publicaciones, elementoHtml) => {
                 <h5>${publicacion.titulo}</h5>
                 <p>${publicacion.descripcion}</p>
                 <p>${publicacion.fecha}</p>
+                <p>${publicacion.autor}</p>
             </div>
             </section>
         `
@@ -45,3 +46,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 document.getElementById("botonCrear").onclick = function () {
     window.location.href = "http://localhost:3000/admin";
 };
+
+document.getElementById("botonEditar").onclick = function () {
+    window.location.href = "http://localhost:3000/editar";
+};
+

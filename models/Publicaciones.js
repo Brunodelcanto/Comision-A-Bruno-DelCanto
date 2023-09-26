@@ -21,6 +21,10 @@ const PublicacionSchema = sequelize.define('Publicaciones', {
   url_imagen: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  autor: {
+    type: DataTypes.STRING,
+    allowNull: false,
   }
 },{
   tableName: 'publicaciones',

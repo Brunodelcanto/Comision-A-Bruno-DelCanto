@@ -3,20 +3,27 @@ const Publicaciones = require('../models/Publicaciones');
 
 ctrl.crearPublicacion = async (req, res) => {
     try {
+        if (!req.body.titulo || !req.body.descripcion || !req.body.fecha || !req.body.url_imagen || !req.body.autor) {
+            return res.status(400).json({
+                msg: "Por favor, complete todos los campos obligatorios."
+            });
+        }
+
         // Se crea una nueva publicación
         const publicacion = await Publicaciones.create(req.body);
-        res.send({
+
+        res.status(201).json({
             msg: "Publicación creada con éxito",
             publicacion
-        })
+        });
     } catch (error) {
-        console.log(error)
+        console.error(error);
         return res.status(500).json({
             msg: "Error al crear nueva publicación"
-        })
+        });
     }
+};
 
-}
 
 // Se consultan todas las publicaciones
 ctrl.obtenerPublicaciones = async (req, res) => {
